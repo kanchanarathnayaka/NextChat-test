@@ -2,6 +2,8 @@ FROM node:18-alpine AS base
 
 FROM base AS deps
 
+USER 10001
+
 RUN apk add --no-cache libc6-compat
 
 WORKDIR /app
